@@ -69,3 +69,5 @@ function sendMessage(passage)
 		req.end();
 }
 
+
+sendScripture();
