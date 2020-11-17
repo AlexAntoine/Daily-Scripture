@@ -1,6 +1,6 @@
-const http = require('https');
+const http = require('http');
 
-const server = http.createServer(function(res, req){
+const server = http.createServer(function(req, res){
    
     res.setHeader('content-type', 'text/plain');
     res.write('hello');
