@@ -2,9 +2,25 @@ const http = require("https");
 var qs = require("querystring");
 
 
+function getTime()
+{
+	const event = new Date();
+
+
+	var time = event.toLocaleTimeString('en-US');
+	// console.log(event.toLocaleTimeString('en-US'));
+	console.log(time);
+	
+	if(time === "6:00:12 AM" || time === "9:00:12 PM")
+	{
+		console.log('reached');
+		sendScripture();
+	}
+}
+setInterval(getTime, 1000);
+
+
 function sendScripture(){
-
-
 	const options = {
 		"method": "GET",
 		"hostname": "ajith-holy-bible.p.rapidapi.com",
@@ -70,4 +86,4 @@ function sendMessage(passage)
 }
 
 
-sendScripture();
+// sendScripture();
