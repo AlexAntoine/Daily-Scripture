@@ -87,3 +87,7 @@ function sendMessage(passage)
 
 
 // sendScripture();
+
+
+//two apis are being used, one to get the scripture and the other to send the scripture vi SMS
+//
