@@ -1,11 +1,14 @@
 const express = require('express');
 const body = require('body-parser');
 
+
 const app = express();
 app.use(body.urlencoded({extended: true}));
 
 app.use(express.static("public"));
 
+const arrayOfNumbers = ['16178032176'];
+let temp = '1';
 
 app.get('/', function(req, res){
 
@@ -16,8 +19,27 @@ app.get('/', function(req, res){
 });
 
 app.post('/', function(req,res){
+    
+    temp += req.body.number;
 
-    const number = req.body.phoneNumber;
+    arrayOfNumbers.push(temp);
 
-    console.log(number);
+    res.redirect('/');
+    console.log(arrayOfNumbers);
+    
 });
+
+exports.arrayOfNumbers = arrayOfNumbers;
+
+// s
+
+/*
+*
+Exports single variable :
+exports.numbers = numbers;
+*
+*
+Exports entire file:
+module.exports = 
+
+*/
