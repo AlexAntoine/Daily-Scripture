@@ -1,11 +1,11 @@
 const http = require("https");
 var qs = require("querystring");
+var digits = require('./index');
 
 
 function getTime()
 {
 	const event = new Date();
-
 
 	var time = event.toLocaleTimeString('en-US');
 	// console.log(event.toLocaleTimeString('en-US'));
@@ -17,10 +17,12 @@ function getTime()
 		sendScripture();
 	}
 }
+
 setInterval(getTime, 1000);
 
 
-function sendScripture(){
+function sendScripture()
+{
 	const options = {
 		"method": "GET",
 		"hostname": "ajith-holy-bible.p.rapidapi.com",
@@ -81,7 +83,7 @@ function sendMessage(passage)
 			});
 		});
 
-		req.write(qs.stringify({message: `${passage}`, toNumber: '16178032176'}));
+		req.write(qs.stringify({message: `${passage}`, toNumber: digits.arrayOfNumbers[0]}));
 		req.end();
 }
 
