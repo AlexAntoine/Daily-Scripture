@@ -1,0 +1,12 @@
+12/20/2020
+
+Got the UI to accpet numbers from the user. The numbers are being saved in an array in the index.js file.
+The file then exports the array. The app.js file imports from the index.js file. 
+
+I can then use that to call the array values (see line 86, app.js).
+
+Order of sequence of things:
+
+app is deployed. 
+user enters number, this triggers index.js. File responds appropriately.
+array value is exported to app.js. this triggers the method that sends he first message.
