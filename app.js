@@ -18,7 +18,7 @@ function getTime()
 	}
 }
 
-setInterval(getTime, 1000);
+// setInterval(getTime, 1000);
 
 
 function sendScripture()
@@ -88,7 +88,7 @@ function sendMessage(passage)
 }
 
 
-// sendScripture();
+sendScripture();
 
 
 //two apis are being used, one to get the scripture and the other to send the scripture vi SMS
