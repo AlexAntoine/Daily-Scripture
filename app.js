@@ -47,7 +47,7 @@ function sendScripture()
 
 			var passage = JSON.parse(text);
 
-			sendMessage(passage.Output);
+			sendMessage('hello');
 
 		});
 	});
