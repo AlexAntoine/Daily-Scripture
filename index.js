@@ -24,7 +24,7 @@ app.post('/', function(req,res){
 
     arrayOfNumbers.push(temp);
 
-    res.redirect('/');
+    res.redirect(__dirname + "/success.html");
     console.log(arrayOfNumbers);
     
 });
