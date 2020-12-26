@@ -10,3 +10,7 @@ Order of sequence of things:
 app is deployed. 
 user enters number, this triggers index.js. File responds appropriately.
 array value is exported to app.js. this triggers the method that sends he first message.
+
+12-26-220
+
+in the success file the links are making a get request when clicked. They are behaving like buttons
