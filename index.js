@@ -1,5 +1,6 @@
 const express = require('express');
 const body = require('body-parser');
+const getTime = require('./app');
 
 
 const app = express();
@@ -7,13 +8,15 @@ app.use(body.urlencoded({extended: true}));
 
 app.use(express.static("public"));
 
-const arrayOfNumbers = ['6178032176'];
+const arrayOfNumbers = [];
 
 app.get('/', function(req, res){
 
     res.sendFile(__dirname + "/index.html");
 
-}).listen(3000, function(){
+})
+
+app.listen(proces.env.PORT || 3000, () =>{
     console.log('server is listening at port 3000');
 });
 
@@ -27,3 +30,7 @@ app.post('/', function(req,res){
     console.log(arrayOfNumbers);
     
 });
+
+getTime('Keep doing your best. LOVE YOU!!');
+
+
