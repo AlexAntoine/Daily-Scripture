@@ -8,7 +8,7 @@ app.use(body.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 const arrayOfNumbers = ['16178032176'];
-let temp = '1';
+let temp = '';
 
 app.get('/', function(req, res){
 
@@ -24,22 +24,7 @@ app.post('/', function(req,res){
 
     arrayOfNumbers.push(temp);
 
-    res.redirect(__dirname + "/success.html");
+    res.sendFile(__dirname +'/success.html');
     console.log(arrayOfNumbers);
     
 });
-
-exports.arrayOfNumbers = arrayOfNumbers;
-
-// s
-
-/*
-*
-Exports single variable :
-exports.numbers = numbers;
-*
-*
-Exports entire file:
-module.exports = 
-
-*/
