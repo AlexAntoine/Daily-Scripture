@@ -7,8 +7,7 @@ app.use(body.urlencoded({extended: true}));
 
 app.use(express.static("public"));
 
-const arrayOfNumbers = ['16178032176'];
-let temp = '';
+const arrayOfNumbers = ['6178032176'];
 
 app.get('/', function(req, res){
 
@@ -20,7 +19,7 @@ app.get('/', function(req, res){
 
 app.post('/', function(req,res){
     
-    temp += req.body.number;
+    let temp = req.body.number;
 
     arrayOfNumbers.push(temp);
 
