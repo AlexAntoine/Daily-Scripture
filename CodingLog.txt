@@ -14,3 +14,8 @@ array value is exported to app.js. this triggers the method that sends he first 
 12-26-220
 
 in the success file the links are making a get request when clicked. They are behaving like buttons
+
+1/26/2021
+
+something is wrong with the array that contains the numbers. need to implement the new api. I'm going to start off by 
+just getting the program to send a good morning text
