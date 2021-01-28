@@ -31,6 +31,6 @@ app.post('/', function(req,res){
     
 });
 
-// getTime('Keep doing your best. LOVE YOU!!');
+getTime('Keep doing your best. LOVE YOU!!');
 
 
