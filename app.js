@@ -6,8 +6,6 @@ const getTime = (message) =>{
 
 	var time = event.toLocaleTimeString('en-US');
 
-	sendMessage(message);
-	
 	if(time === "6:00:12 AM" || time === "9:00:12 PM")
 	{
 		console.log('reached');
