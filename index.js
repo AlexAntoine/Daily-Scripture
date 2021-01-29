@@ -18,6 +18,9 @@ app.get('/', function(req, res){
 
 app.listen(process.env.PORT || 3000, () =>{
     console.log('server is listening at port 3000');
+
+    getTime('Keep doing your best. LOVE YOU!!');
+
 });
 
 app.post('/', function(req,res){
@@ -31,6 +34,6 @@ app.post('/', function(req,res){
     
 });
 
-getTime('Keep doing your best. LOVE YOU!!');
+
 
 
