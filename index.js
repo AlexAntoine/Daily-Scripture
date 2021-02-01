@@ -1,12 +1,12 @@
 const express = require('express');
 const body = require('body-parser');
 const getTime = require('./app');
-
+const path = require('path');
 
 const app = express();
 app.use(body.urlencoded({extended: true}));
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, '/public')));
 
 const arrayOfNumbers = [];
 
@@ -16,11 +16,8 @@ app.get('/', function(req, res){
 
 })
 
-app.listen(process.env.PORT || 3000, () =>{
-    console.log('server is listening at port 3000');
-
-    getTime('Keep doing your best. LOVE YOU!!');
-
+app.listen(process.env.PORT || 4000, () =>{
+    console.log('server is listening at port 4000');
 });
 
 app.post('/', function(req,res){
@@ -33,6 +30,8 @@ app.post('/', function(req,res){
     console.log(arrayOfNumbers);
     
 });
+
+getTime('Keep doing your best. LOVE YOU!!');
 
 
 
