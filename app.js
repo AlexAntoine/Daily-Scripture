@@ -6,6 +6,8 @@ const getTime = (message) =>{
 
 	var time = event.toLocaleTimeString('en-US');
 
+	console.log(time);
+
 	if(time === "6:00:12 AM" || time === "9:00:12 PM")
 	{
 		console.log('reached');
@@ -38,6 +40,8 @@ const sendMessage = (message) =>{
 	  });
 	
 };
+
+getTime('test');
 
 
 
